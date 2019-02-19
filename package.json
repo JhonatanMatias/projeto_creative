@@ -1,0 +1,29 @@
+{
+  "name": "projeto_creative",
+  "version": "1.0.0",
+  "description": "Projeto para fins de estudo pessoal do bootstrap4 a partir do template Creative disponibilizado pelo site https://startbootstrap.com/",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonatanMatias/projeto_creative.git"
+  },
+  "author": "Jhonatan Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhonatanMatias/projeto_creative/issues"
+  },
+  "homepage": "https://github.com/JhonatanMatias/projeto_creative#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1"
+  }
+}
