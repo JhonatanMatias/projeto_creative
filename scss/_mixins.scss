@@ -9,13 +9,13 @@
 	transition: all 0.2s
 }
 
-@mixin background-size(){
+@mixin background-cover(){
 
-	-webkit-background-size: couver;
-	-moz-background-size: couver;
-	-o-background-size: couver;
-	-ms-background-size: couver;
-	background-size: couver;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
 
 }
 

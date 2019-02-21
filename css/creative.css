@@ -1,3 +1,11 @@
+.text-faded {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+}
+
 #navPrincipal {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
@@ -76,5 +84,51 @@
   }
   #navPrincipal.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover, #navPrincipal.navbar-shrink a.nav-link:focus:hover {
     color: #F05F40;
+  }
+}
+
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: url(../img/header.jpg);
+  background-position: center center;
+  -ms-background-size: cover;
+  background-size: cover;
+}
+
+header.masthead hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+header.masthead p {
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  header.masthead p {
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 992px) {
+  header.masthead {
+    height: 100vh;
+    min-height: 650px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.masthead h1 {
+    font-size: 4rem;
   }
 }
