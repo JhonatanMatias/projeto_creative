@@ -1,21 +1,22 @@
-//Carregando os plugins
+//carregando plugins
 var autoprefixer = require('gulp-autoprefixer');
 var browsersync = require('browser-sync').create();
 var cleanCSS = require('gulp-clean-css');
-var gulp = require('gulp');
 var plumber = require('gulp-plumber');
-var sass = require('gulp-sass');
 var rename = require('gulp-rename');
+var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
-var pkg = require('./package.json/');
+var gulp = require('gulp');
+var pkg = require('./package.json');
 
-//CSS task
+//css Task
 
-function css(){
+function css() {
 
 	return gulp.src('./scss/*.scss')
 	  .pipe(plumber())
 	  .pipe(sass({
+
 	  	outputStyle: "expanded"
 	  }))
 	  .on('error',sass.logError)
@@ -27,21 +28,23 @@ function css(){
 	  .pipe(gulp.dest('./css'))
 	  .pipe(rename({
 
-	  	suffix: 'min'
+	  	suffix: ".min"
 	  }))
 	  .pipe(cleanCSS())
 	  .pipe(gulp.dest('./css'))
 	  .pipe(browsersync.stream());
+
 }
 
-//JS task
+
+//js task
 
 function js(){
 
 	return gulp.src([
-		'./js/*.js',
-		'!./js/*.min.js',
-		'!./js/jqBootstrapValidation.js'
+
+		 './js/*.js',
+		 '!./js/*.min.js'
 		])
 	  .pipe(uglify())
 	  .pipe(rename({
@@ -52,15 +55,13 @@ function js(){
 	  .pipe(browsersync.stream());
 }
 
-
 //tasks
 
 gulp.task('css',css);
 gulp.task('js',js);
 
 
-//BrowserSync
-
+//browserSync
 function browserSync(done) {
 
 	browsersync.init({
@@ -69,33 +70,33 @@ function browserSync(done) {
 
 			baseDir: './'
 		}
-	});
+	})
 
 	done();
 }
 
-//browserSync Reload
-function browserSyncReload(done) {
+//browserSync reload
+
+function browserSyncReload(done){
 
 	browsersync.reload();
 	done();
 }
 
+//watch files
+function watchFiles() {
 
-//Watch files
-
-function watchFiles(){
-
-	gulp.watch('./scss/*.scss',gulp.series(css));
-	gulp.watch(['./js/*.js','!./js/*.min.js'],gulp.series(js));
-	gulp.watch('./**/*.html',gulp.series(browserSyncReload));
+	gulp.watch('./scss/**/*.scss',css);
+	gulp.watch(['./js/**/*.js','!./js/**/*.min.js'],js);
+	gulp.watch('./**/*.html',browserSyncReload);
 }
 
 
 gulp.task('default',gulp.parallel(css,js));
 
-//Dev tasks
+//dev task
 gulp.task('dev',gulp.parallel(watchFiles,browserSync));
+
 
 
 

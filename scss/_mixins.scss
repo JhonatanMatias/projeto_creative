@@ -1,0 +1,30 @@
+//Mixins
+
+@mixin transition-all(){
+
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s
+}
+
+@mixin background-size(){
+
+	-webkit-background-size: couver;
+	-moz-background-size: couver;
+	-o-background-size: couver;
+	-ms-background-size: couver;
+	background-size: couver;
+
+}
+
+@mixin serif-font(){
+
+	font-family: 'Merriweather','Helvetica Neue',Arial,sans-serif;
+}
+
+@mixin sans-serif-font(){
+
+	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
