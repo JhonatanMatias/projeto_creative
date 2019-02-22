@@ -1,3 +1,33 @@
 //Customização das classes do bootstrap
 
+.text-primary { color: $primary !important}
+
+.btn {
+	font-weight: 300;
+	text-transform: uppercase;
+	border: 0;
+	border-radius: 300px;
+	@include sans-serif-font;
+}
 .btn-xl {padding: 1rem 2rem}
+
+.btn-primary {
+
+	border-color: $primary;
+	background-color: $primary;
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		color: $white;
+		background-color: darken($primary,5%) !important;
+	}
+
+	&:focus,
+	&:active {
+
+		box-shadow: 0 0 0 0.2rem rgba(240,95,64,.5) !important;
+	}
+
+}
