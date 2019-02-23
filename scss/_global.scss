@@ -47,3 +47,22 @@ h6 {@include sans-serif-font;}
 section { padding: 8rem 0}
 
 .section-heading {margin-top: 0;}
+
+::-moz-selection {
+
+	color: $white;
+	background-color: $gray-900;
+	text-shadow: none;
+}
+
+::selection {
+
+	color: $white;
+	background-color: $gray-900;
+	text-shadow: none;
+}
+
+img::-moz-selection {
+
+	color: $white;
+}

@@ -57,6 +57,16 @@ section {
   margin-top: 0;
 }
 
+::selection {
+  color: #fff;
+  background-color: #212529;
+  text-shadow: none;
+}
+
+img::-moz-selection {
+  color: #fff;
+}
+
 .text-primary {
   color: #F05F40 !important;
 }
