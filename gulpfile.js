@@ -87,7 +87,7 @@ function browserSyncReload(done){
 function watchFiles() {
 
 	gulp.watch('./scss/**/*.scss',css);
-	gulp.watch(['./js/**/*.js','!./js/**/*.min.js'],js);
+	gulp.watch(["./js/**/*.js","!./js/*.min.js"], js);
 	gulp.watch('./**/*.html',browserSyncReload);
 }
 
